@@ -56,7 +56,11 @@ db.transaction(searchAll, errorCB, successCB);
 })
 
 $("#disphtml").click(function(){
-	document.location.href="http://localhost:8000/disp.html";
+	document.location.href="http://localhost:8001/disp.html";
+})
+
+$("#indexhtml").click(function(){
+  document.location.href="http://localhost:8001/index.html";
 })
 
 $("#refresh").click(function dletedb(tx){
@@ -75,8 +79,8 @@ function dispAll(tx)
 	       		"<td scope='col'>" + tache[i].nom + "</td>"+
 	       		"<td scope='col'>" + tache[i].debut + "</td>"+
 	       		"<td scope='col'>" + tache[i].duree + "</td>"+
-	       		"<td><button class='delete' id='delete"+tache[i].id+"'>delete</button>"+
-	       		"<button class='modify' id='modify' >" + 'modify' + "</button>"+
+	       		"<td><button class='btn btn-danger delete' id='delete"+tache[i].id+"'>delete</button>"+
+	       		"<button class='btn btn-success modify' id='modify' >" + 'modify' + "</button>"+
 	       		"</td></tr>")
 	       	
        	}
